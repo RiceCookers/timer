@@ -5,16 +5,14 @@ Running only MacOS(using say command)
 
 # How to Run
 
-```
-$ ruby timer.rb
-Start 1234 # <- PID
+```sh
+$ ./simple_timer start
 ```
 
 Run Daemon!
 
 # How to Stop
 
-```
-$ ps aux | grep timer.rb
-$ kill 1234 # <- PID
+```sh
+$ ./simple_timer stop
 ```

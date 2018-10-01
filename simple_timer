@@ -1,0 +1,24 @@
+#!/bin/sh
+
+CMD="ruby ./timer.rb"
+
+start() {
+  $CMD
+}
+
+stop() {
+  kill `cat ./timer.pid`
+  rm ./timer.pid
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  *)
+    echo "Command Not Found: [start|stop]"
+    ;;
+esac

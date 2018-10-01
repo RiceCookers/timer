@@ -1,5 +1,5 @@
 
-INTERVAL_TIME = 60
+INTERVAL_TIME = 600
 SAY_MESSAGE_TEMPLATE = "分経過です"
 
 timer = 0
@@ -12,6 +12,6 @@ while true do
   timer += 1
 
   if (timer % INTERVAL_TIME) == 0
-    system("say #{(timer / INTERVAL_TIME) * 10}#{SAY_MESSAGE_TEMPLATE}")
+    system("say #{(timer / INTERVAL_TIME)}#{SAY_MESSAGE_TEMPLATE}")
   end
 end
